@@ -11,9 +11,8 @@ import {
   },
 })
 export class OicqGateway {
-  @SubscribeMessage('message')
+  @SubscribeMessage('echo')
   echoMessage(@MessageBody() data: string): WsResponse<string> {
-    console.log('data', data);
-    return { event: 'message', data: data };
+    return { event: 'echo', data: data };
   }
 }
