@@ -9,6 +9,7 @@ import {
   cors: {
     origin: '*',
   },
+  path: '/api/v1/oicq',
 })
 export class OicqGateway {
   @SubscribeMessage('echo')
